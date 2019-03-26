@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "denseneutroncollectors:double_compressed_neutron_collector",
+    "count": 1
+  },
+  "pattern": [
+    "CCC",
+    "CCC",
+    "CCC"
+  ],
+  "key": {
+    "C": {
+      "type": "minecraft:item",
+      "item": "denseneutroncollectors:compressed_neutron_collector"
+    }
+  }
+}

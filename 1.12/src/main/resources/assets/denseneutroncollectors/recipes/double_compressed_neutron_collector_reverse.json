@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "denseneutroncollectors:double_compressed_neutron_collector"
+    }
+  ],
+  "result": {
+    "item": "denseneutroncollectors:compressed_neutron_collector",
+    "count": 9
+  }
+}

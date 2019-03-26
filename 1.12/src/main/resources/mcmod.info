@@ -1,0 +1,16 @@
+[
+{
+  "modid": "denseneutroncollectors",
+  "name": "Dense Neutron Collectors",
+  "description": "Adds additional tiers of neutron collectors to Avaritia to ease grind and tps issues",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Tfarcenim"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
