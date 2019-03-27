@@ -1,19 +1,17 @@
 package com.tfar.denseneutroncollectors.client.gui;
 
 import codechicken.lib.math.MathHelper;
-import com.tfar.denseneutroncollectors.DenseNeutronCollectors;
 import com.tfar.denseneutroncollectors.container.ContainerTripleCompressedNeutronCollector;
 import com.tfar.denseneutroncollectors.tile.TileTripleCompressedNeutronCollector;
 import morph.avaritia.client.gui.GuiMachineBase;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.util.ResourceLocation;
+
+import static com.tfar.denseneutroncollectors.client.gui.GUICompressedNeutronCollector.GUI_TEX;
 
 public class GUITripleCompressedNeutronCollector extends GuiMachineBase<TileTripleCompressedNeutronCollector, ContainerTripleCompressedNeutronCollector> {
 
-        private static final ResourceLocation GUI_TEX =
-                new ResourceLocation(DenseNeutronCollectors.MODID, "textures/gui/triple_compressed_neutron_collector_gui.png");
     public GUITripleCompressedNeutronCollector(InventoryPlayer player, TileTripleCompressedNeutronCollector machine) {
         super(new ContainerTripleCompressedNeutronCollector(player, machine));
         setBackgroundTexture(GUI_TEX);

@@ -1,9 +1,9 @@
 package com.tfar.denseneutroncollectors.client.gui;
 
 import codechicken.lib.math.MathHelper;
-import com.tfar.denseneutroncollectors.DenseNeutronCollectors;
 import com.tfar.denseneutroncollectors.container.ContainerCompressedNeutronCollector;
 import com.tfar.denseneutroncollectors.tile.TileCompressedNeutronCollector;
+import morph.avaritia.Avaritia;
 import morph.avaritia.client.gui.GuiMachineBase;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
@@ -12,8 +12,8 @@ import net.minecraft.util.ResourceLocation;
 
 public class GUICompressedNeutronCollector extends GuiMachineBase<TileCompressedNeutronCollector, ContainerCompressedNeutronCollector> {
 
-        private static final ResourceLocation GUI_TEX =
-                new ResourceLocation(DenseNeutronCollectors.MODID, "textures/gui/compressed_neutron_collector_gui.png");
+        public static final ResourceLocation GUI_TEX =
+                new ResourceLocation(Avaritia.MOD_ID, "textures/gui/neutron_collector_gui.png");
     public GUICompressedNeutronCollector(InventoryPlayer player, TileCompressedNeutronCollector machine) {
         super(new ContainerCompressedNeutronCollector(player, machine));
         setBackgroundTexture(GUI_TEX);

@@ -5,7 +5,9 @@ import com.tfar.denseneutroncollectors.container.ContainerDoubleCompressedNeutro
 import com.tfar.denseneutroncollectors.container.ContainerTripleCompressedNeutronCollector;
 import com.tfar.denseneutroncollectors.tile.TileCompressedNeutronCollector;
 import com.tfar.denseneutroncollectors.tile.TileDoubleCompressedNeutronCollector;
+import com.tfar.denseneutroncollectors.tile.TileGoodNeutronCollector;
 import com.tfar.denseneutroncollectors.tile.TileTripleCompressedNeutronCollector;
+import morph.avaritia.container.ContainerNeutronCollector;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
@@ -25,6 +27,8 @@ public class GUIHandler implements IGuiHandler {
                     return new GUIDoubleCompressedNeutronCollector(player.inventory, ((TileDoubleCompressedNeutronCollector) tile));
                 case 2:
                     return new GUITripleCompressedNeutronCollector(player.inventory, ((TileTripleCompressedNeutronCollector) tile));
+                case 3:
+                    return new GUIGoodNeutronCollector(player.inventory,((TileGoodNeutronCollector)tile));
                 default:
                     return null;
             }
@@ -42,6 +46,8 @@ public class GUIHandler implements IGuiHandler {
                     return new ContainerDoubleCompressedNeutronCollector(player.inventory, ((TileDoubleCompressedNeutronCollector) tile));
                 case 2:
                     return new ContainerTripleCompressedNeutronCollector(player.inventory, ((TileTripleCompressedNeutronCollector) tile));
+                case 3:
+                    return new ContainerNeutronCollector(player.inventory,((TileGoodNeutronCollector)tile));
                 default:
             return null;
         }

@@ -1,20 +1,18 @@
 package com.tfar.denseneutroncollectors.client.gui;
 
 import codechicken.lib.math.MathHelper;
-import com.tfar.denseneutroncollectors.DenseNeutronCollectors;
-import com.tfar.denseneutroncollectors.container.ContainerDoubleCompressedNeutronCollector;
-import com.tfar.denseneutroncollectors.tile.TileDoubleCompressedNeutronCollector;
-import morph.avaritia.client.gui.GuiMachineBase;
+import com.tfar.denseneutroncollectors.tile.TileGoodNeutronCollector;
+import morph.avaritia.client.gui.GUINeutronCollector;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 
 import static com.tfar.denseneutroncollectors.client.gui.GUICompressedNeutronCollector.GUI_TEX;
 
-public class GUIDoubleCompressedNeutronCollector extends GuiMachineBase<TileDoubleCompressedNeutronCollector, ContainerDoubleCompressedNeutronCollector> {
+public class GUIGoodNeutronCollector extends GUINeutronCollector {
 
-    public GUIDoubleCompressedNeutronCollector(InventoryPlayer player, TileDoubleCompressedNeutronCollector machine) {
-        super(new ContainerDoubleCompressedNeutronCollector(player, machine));
+    public GUIGoodNeutronCollector(InventoryPlayer player, TileGoodNeutronCollector machine) {
+        super(player, machine);
         setBackgroundTexture(GUI_TEX);
     }
 
@@ -27,8 +25,8 @@ public class GUIDoubleCompressedNeutronCollector extends GuiMachineBase<TileDoub
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 
-        String s = I18n.format("container.double_compressed_neutron_collector");
-        float scaled_progress = scaleF(machineTile.getProgress(), TileDoubleCompressedNeutronCollector.ticks, 100);
+        String s = I18n.format("container.neutron_collector");
+        float scaled_progress = scaleF(machineTile.getProgress(), TileGoodNeutronCollector.ticks, 100);
         String progress = "Progress: " + MathHelper.round(scaled_progress, 10) + "%";
 
         fontRenderer.drawString(s, xSize / 2 - fontRenderer.getStringWidth(s) / 2, 6, 0x404040);
